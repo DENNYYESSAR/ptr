@@ -905,6 +905,75 @@ section {
   color: #fff;
 }
 
+/* Custom Contact Cards */
+.contact-card {
+  padding: 40px 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.contact-card.clickable {
+  cursor: pointer;
+}
+
+.contact-card .icon-wrap {
+  width: 60px;
+  height: 60px;
+  background: #dff3fc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-card .icon-wrap i {
+  font-size: 24px;
+  color: #149ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #050d18;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: #173b6c;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+/* Hover effects */
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(20, 157, 221, 0.15);
+  border-color: #149ddd;
+  text-decoration: none;
+}
+
+.contact-card:hover .icon-wrap {
+  background: #149ddd;
+}
+
+.contact-card:hover .icon-wrap i {
+  color: #fff;
+}
+
 .contact .php-email-form {
   width: 100%;
   padding: 30px;

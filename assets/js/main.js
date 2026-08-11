@@ -46,11 +46,25 @@
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
+    let scrolledToBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2
+    
+    let activeLink = null
+    
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        activeLink = navbarlink
+      }
+    })
+    
+    if (scrolledToBottom && navbarlinks.length > 0) {
+      activeLink = navbarlinks[navbarlinks.length - 1]
+    }
+    
+    navbarlinks.forEach(navbarlink => {
+      if (navbarlink === activeLink) {
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
