@@ -107,11 +107,12 @@ h6 {
 
 #header .profile .social-links a {
   font-size: 18px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #212431;
   color: #fff;
   line-height: 1;
-  padding: 8px 0;
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
@@ -949,6 +950,7 @@ section {
   font-weight: 600;
   margin-bottom: 10px;
   color: #050d18;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-card p {
@@ -956,6 +958,7 @@ section {
   color: #173b6c;
   margin-bottom: 0;
   word-break: break-word;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Hover effects */
